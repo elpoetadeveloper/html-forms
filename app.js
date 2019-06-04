@@ -11,7 +11,11 @@ function openForm() {
               <label for="tres">Tres</label>
          <input type="text" name="tres" id="tres" ><br>
 
-              <label for="cuatro">Cuatro</label>
+    <label for="copy">Copy</label>
+         <input type="text" name="copy" id="copy" value="https://www.google.com" readonly ><br>
+        <button onclick="copyToClipboard();">Copy url</button>
+         
+         <label for="cuatro">Cuatro</label>
          <input type="text" name="cuatro" id="cuatro" ><br>
 
               <label for="cinco">Cinco</label>
@@ -49,4 +53,14 @@ function cancel() {
   document
     .querySelector("body")
     .removeChild(document.querySelector("body").childNodes[0]);
+}
+
+//function copyurl() {
+//console.log("copied###");
+//}
+
+function copyToClipboard() {
+  console.log("buton copy!!!");
+  const val = document.querySelector("#copy").select();
+  const cp = document.execCommand("copy");
 }
